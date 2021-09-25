@@ -1,0 +1,23 @@
+{
+    "ocs": {
+        "0": {
+            "id": "0",
+            "nombre": "Elian",
+            "avatar": "ocs-avatar/elian.png",
+            "photo": "ocs-photo/elian.png"
+        },
+        "1": {
+            "id": "1",
+            "nombre": "test1",
+            "avatar": "ocs-avatar/test1.png",
+            "photo": "ocs-photo/elian.png"
+        },
+        "2": {
+            "id": "2",
+            "nombre": "test2",
+            "avatar": "ocs-avatar/test2.png",
+            "photo": "ocs-photo/elian.png"
+        }
+    }
+
+}
