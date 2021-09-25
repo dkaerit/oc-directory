@@ -59,7 +59,8 @@
         border: 1px solid #080808;
         z-index: 10;
         font-size: 11px;
-        border-radius: 2px;
+        text-transform: uppercase;
+        border-radius: 1px;
       }
     }
   }
