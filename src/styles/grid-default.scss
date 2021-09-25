@@ -1,0 +1,65 @@
+body { margin: 0; }
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+
+
+
+
+// --- CONTENEDORES ---
+box {
+  display: block;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 10px;
+
+  &.fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0px;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+
+
+
+// --- FILAS ---
+row {
+  display: block;
+  margin-right: -15px;
+  margin-left: -15px; 
+
+  &.no-gutters {
+    margin-right: 0;
+    margin-left: 0; 
+  }
+}
+
+
+
+
+// --- OTRAS COSAS --
+[role="button"] { cursor: pointer; }
+.pull-right { float: right !important; }
+.pull-left { float: left !important; }
+.hide { display: none !important; }
+.show { display: block !important; }
+.invisible { visibility: hidden; }
+.affix { position: fixed; }
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; 
+}
+

@@ -1,0 +1,64 @@
+@media (min-width: 992px) { // md
+    //box { width: 970px; }
+
+    gcol {
+      position: relative;
+      min-height: 1px;
+      float: left; 
+
+      &.md-12 {width: 100%; }
+      &.md-11 { width: 91.66666667%; }
+      &.md-10 { width: 83.33333333%; }
+      &.md-9  { width: 75%; }
+      &.md-8  { width: 66.66666667%; }
+      &.md-7  { width: 58.33333333%; }
+      &.md-6  { width: 50%; }
+      &.md-5  { width: 41.66666667%; }
+      &.md-4  { width: 33.33333333%; }
+      &.md-3  { width: 25%; }
+      &.md-2  { width: 16.66666667%; }
+      &.md-1  { width: 8.33333333%; }
+
+      &.md-pull-12 { right: 100%; }
+      &.md-pull-11 { right: 91.66666667%; }
+      &.md-pull-10 { right: 83.33333333%; }
+      &.md-pull-9  { right: 75%; }
+      &.md-pull-8  { right: 66.66666667%; }
+      &.md-pull-7  { right: 58.33333333%; }
+      &.md-pull-6  { right: 50%; }
+      &.md-pull-5  { right: 41.66666667%; }
+      &.md-pull-4  { right: 33.33333333%; }
+      &.md-pull-3  { right: 25%; }
+      &.md-pull-2  { right: 16.66666667%; }
+      &.md-pull-1  { right: 8.33333333%; }
+      &.md-pull-0  { right: auto; }
+  
+      &.md-push-12 { left: 100%; }
+      &.md-push-11 { left: 91.66666667%; }
+      &.md-push-10 { left: 83.33333333%; }
+      &.md-push-9  { left: 75%; }
+      &.md-push-8  { left: 66.66666667%; }
+      &.md-push-7  { left: 58.33333333%; }
+      &.md-push-6  { left: 50%; }
+      &.md-push-5  { left: 41.66666667%; }
+      &.md-push-4  { left: 33.33333333%; }
+      &.md-push-3  { left: 25%; }
+      &.md-push-2  { left: 16.66666667%; }
+      &.md-push-1  { left: 8.33333333%; }
+      &.md-push-0  { left: auto; }
+  
+      &.md-offset-12 { margin-left: 100%; }
+      &.md-offset-11 { margin-left: 91.66666667%; }
+      &.md-offset-10 { margin-left: 83.33333333%; }
+      &.md-offset-9  { margin-left: 75%; }
+      &.md-offset-8  { margin-left: 66.66666667%; }
+      &.md-offset-7  { margin-left: 58.33333333%; }
+      &.md-offset-6  { margin-left: 50%; }
+      &.md-offset-5  { margin-left: 41.66666667%; }
+      &.md-offset-4  { margin-left: 33.33333333%; }
+      &.md-offset-3  { margin-left: 25%; }
+      &.md-offset-2  { margin-left: 16.66666667%; }
+      &.md-offset-1  { margin-left: 8.33333333%; }
+      &.md-offset-0  { margin-left: 0%; }
+    }
+}
