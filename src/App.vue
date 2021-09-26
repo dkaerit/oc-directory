@@ -3,6 +3,17 @@
   <router-view/>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  data() {},
+  components: {
+    
+  }
+}
+</script>
+
+
 <style lang="scss">
   // fonts
   @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;700&display=swap');
@@ -50,7 +61,7 @@
       opacity: 1;
       &::after {
         position: relative;
-        top: -30px;
+        bottom: 30px;
         left: 5px;
         content: attr(c-title);
         color: rgb(201, 201, 201);
@@ -58,7 +69,8 @@
         padding: 5px;
         border: 1px solid #080808;
         z-index: 10;
-        font-size: 11px;
+        font-size: 8px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         border-radius: 1px;
       }

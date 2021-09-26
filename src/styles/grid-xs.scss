@@ -3,9 +3,12 @@
 
     gcol {
       
+      display: flex;
       position: relative;
       min-height: 1px;
-      float: left; 
+
+      &.center-y { align-items: center; }
+      &.center-x { justify-content: center; }
 
       &.xs-12 { width: 100%; }
       &.xs-11 { width: 91.66666667%; }

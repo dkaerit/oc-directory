@@ -1,17 +1,11 @@
 <template>
  <box>
    <!-- BLOG INFO -->
-   <row>
-     <gcol class="xs-12 blog-info inner-miniboxes">
-       <div>Kaerit OC's</div>
-       <div class="dice"></div>
-       <div>Directory</div>
-     </gcol>
-   </row>
+   <Banner/>
    <!-- CUADRADOS DE -->
    <row>
-     <gcol class="xs-12">
-       <div class="flex-wrap style-wrap center-x">
+     <gcol class="xs-12 center-x">
+       <div class="flex-wrap style-wrap">
          <Avatar v-for="id in range(0,31)" :key="id" :oc="ocs[id]" :value="id"/>
        </div>
      </gcol>
@@ -21,6 +15,7 @@
 
 <script>
 import Avatar from "@/components/Avatar.vue";
+import Banner from "@/components/Banner.vue";
 import * as json from "@/bdd/ocs.json";
 
 export default {
@@ -37,44 +32,12 @@ export default {
     }
   },
   components: {
-    Avatar
+    Avatar, Banner
   }
 }
 </script>
 
-<style lang="scss">
-  .dice {
-    width: 35px; height: 35px;
-    margin: 10px;
-    background: url("~@/assets/dice.png");
-    background-size: cover;
-
-    -webkit-animation: rotating 6s linear infinite;
-    -moz-animation: rotating 6s linear infinite;
-    -ms-animation: rotating 6s linear infinite;
-    -o-animation: rotating 6s linear infinite;
-    animation: rotating 6s linear infinite;
-  }
-
-  .inner-miniboxes {
-    display: flex!important;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .blog-info {
-    color: #dedede;
-    background: #020202; 
-    font-family: 'Hind Madurai', sans-serif;
-    font-size: 13.5px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 80px;
-    margin: -10px -15px 0px 0px;
-    text-transform: uppercase;
-  }
-
+<style scoped lang="scss">
   .flex-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -105,36 +68,6 @@ export default {
   @media (min-width: 1200px) {
     .style-wrap {
       width: 1101px;
-    }
-  }
-
-  // keyframes
-  @-webkit-keyframes rotating /* Safari and Chrome */ {
-    from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes rotating {
-    from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
     }
   }
 

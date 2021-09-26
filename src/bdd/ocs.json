@@ -4,7 +4,13 @@
             "id": "0",
             "nombre": "Elian",
             "avatar": "ocs-avatar/elian.png",
-            "photo": "ocs-photo/elian.png"
+            "photo": "ocs-photo/elian.png",
+            "bio": {
+                "Nombre": "Elian",
+                "Edad": "??",
+                "Raza": "??",
+                "O. Sexual": "??"
+            }
         },
         "1": {
             "id": "1",
