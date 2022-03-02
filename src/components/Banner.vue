@@ -1,5 +1,5 @@
 <template>
- <row>
+ <row style="width: auto">
      <gcol class="xs-12 blog-info inner-miniboxes">
        <div>Kaerit OC's</div>
        <div class="dice"></div>

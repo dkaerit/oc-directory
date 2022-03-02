@@ -12,9 +12,6 @@ html {
 // --- CONTENEDORES ---
 box {
   display: block;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 10px;
 
   &.fluid {
     padding-right: 15px;
@@ -29,20 +26,25 @@ box {
   transform: translate(0, -50%)
 }
 
-/*.center-x {
+.content-center {
+  justify-content: center;
+}
+
+.center-x {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-}*/
+}
 
 
 
 
 // --- FILAS ---
 row {
-  display: block;
-  margin-right: -15px;
-  margin-left: -15px; 
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: wrap;
 
   &.no-gutters {
     margin-right: 0;
