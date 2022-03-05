@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkoc_directory"]=self["webpackChunkoc_directory"]||[]).push([[985],{985:function(c,e,r){c.exports=r.p+"img/aurora.c5c9f22d.png"}}]);
