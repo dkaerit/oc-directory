@@ -14,6 +14,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Avatar from "@/components/Avatar.vue";
 import Banner from "@/components/Banner.vue";
 import * as json from "@/bdd/ocs.json";

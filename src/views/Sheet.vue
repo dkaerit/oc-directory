@@ -11,7 +11,7 @@
         <row class="content-center">
           <!-- biografía -->
           <gcol class="xs-12 sm-3 md-2 bio margined">
-            <div class="photo" :style="{'backgroundImage': url(oc.photo)}"/>
+            <div class="photo" :style="{ backgroundImage: this.pic }"/>
             <div class="info">
               <div v-for="parametro in Object.keys(oc.bio)" :key="parametro">{{parametro}}: {{oc.bio[parametro]}}</div>
             </div>
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Banner from "@/components/Banner.vue";
 import * as json from "@/bdd/ocs.json";
 
@@ -43,11 +44,12 @@ export default {
   data() {
     return{
       id: this.$route.query.oc,
-      oc: json.default.ocs[this.$route.query.oc]
+      oc: json.default.ocs[this.$route.query.oc],
+      pic: ''
     }
   },
   methods: {
-    url: pic => `url('${require('@/assets/'+pic)}')`,
+    path: async pic => await import(`@/assets/${pic}`).then(path => path.default),
     select: function(event) { 
       var clicked;
 
@@ -76,10 +78,11 @@ export default {
       return event;
     }
   },
-  mounted() {
+  async mounted() {
     var photo = document.querySelector(".photo");
     photo.style.height = `${Math.round(photo.offsetWidth*1.33+1.5)}px`;  
     this.select(document.querySelector(".fa-brain"));  
+    this.pic = `url('${await this.path(this.oc.photo)}')`;
   },
   components: {
     Banner

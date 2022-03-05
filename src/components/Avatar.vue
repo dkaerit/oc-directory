@@ -1,7 +1,7 @@
 <template>
     <div class="avatar">
       <router-link v-if="oc" :to="`/sheet?oc=${oc.id}`" :c-title="oc.nombre">
-        <div class="mini-pic" :style="{'backgroundImage': url(oc.avatar)}"></div>  
+        <div class="mini-pic" :style="{backgroundImage: `url('${avatars[oc.avatar]}')`}"></div>  
       </router-link>
       <div v-else class="mini-pic"></div>
     </div>
@@ -11,13 +11,24 @@
 export default {
   name: 'MiniAvatar',
   data() {
-    return {}
+    return {
+      avatars: this.importPics(require.context("@/assets/ocs-avatar", false, /\.png$/))
+    }
   },
   props: {
-      oc: Object,
+      oc: Object
   },
   methods: {
-    url: pic => `url('${require('@/assets/'+pic)}')`,
+    path: async pic => await import(`@/assets/${pic}`).then(path => path.default),
+    importPics: function(collection) {
+      let images = {};
+      collection.keys().map(item => {  images[item.replace('./', '')] = collection(item); });
+      console.log(images);
+      return images;
+    }
+  },
+  async mounted() {     
+    
   },
 }
 </script>
