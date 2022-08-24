@@ -38,13 +38,17 @@
 /* eslint-disable */
 import Banner from "@/components/Banner.vue";
 import * as json from "@/bdd/ocs.json";
+import { marked } from "marked";
 
 export default {
   name: 'Sheet',
   data() {
     return{
       id: this.$route.query.oc,
-      oc: json.default.ocs[this.$route.query.oc],
+      oc: json.default.ocs[this.$route.query.oc], // oc.id -> 0
+      personalidad: import(`@/bdd/ocs-mds/${json.default.ocs[this.$route.query.oc].id}/personalidad.md`).then(val => val.default),
+      historia: import(`@/bdd/ocs-mds/${json.default.ocs[this.$route.query.oc].id}/historia.md`).then(val => val.default),
+      otros: import(`@/bdd/ocs-mds/${json.default.ocs[this.$route.query.oc].id}/otros.md`).then(val => val.default),
       pic: ''
     }
   },
@@ -63,11 +67,16 @@ export default {
       clicked.classList.add('selected'); 
       this.setInfo(clicked);
     },
-    setInfo: function(element) {
+    setInfo: async function(element) {
       var contenido = document.querySelector(".contenido");
-      if(element.classList.contains("fa-brain")) contenido.innerHTML = this.oc.personalidad;
-      if(element.classList.contains("fa-book-open")) contenido.innerHTML = this.oc.historia;
-      if(element.classList.contains("fa-jira")) contenido.innerHTML = this.oc.otro;
+      var personalidad = await this.personalidad;
+      var historia = await this.historia;
+      var otros = await this.otros;
+      console.log("post render:", personalidad);
+
+      if(element.classList.contains("fa-brain")) contenido.innerHTML = marked.parse(personalidad);
+      if(element.classList.contains("fa-book-open")) contenido.innerHTML = marked.parse(historia);
+      if(element.classList.contains("fa-jira")) contenido.innerHTML = marked.parse(otros);
     },
 
     aimCursor: function(event) {
@@ -117,6 +126,7 @@ export default {
       padding: 15px;
       width: calc(100% - 30px);
       margin: 10px 0px 10px 0px;
+      font-size: 14px;
   }
 
   .contenido {
@@ -126,7 +136,7 @@ export default {
     margin: 0px 10px 100px 10px;
     color: #fff;
     padding: 36px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
   }
   
@@ -172,6 +182,10 @@ export default {
     .selected {
       background: #0a0a0a;
     }
+  }
+
+  .contenido {
+    display: block;
   }
 
   .margined {

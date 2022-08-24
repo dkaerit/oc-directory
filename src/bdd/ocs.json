@@ -11,26 +11,17 @@
                 "Raza": "Humano",
                 "O. Sexual": "Homosexual"
             },
-            "personalidad": 
-            ["Chongyun es un joven positivo y honorable con una pasión por los dulces. Se toma en serio sus deberes como batería de su banda y suele tener una personalidad estoica y serena, aunque no siempre es así.",
-             "Es un gran trabajador, expresando su desdén hacia su energía positiva, ya que cree que un entrenamiento vigoroso es la clave para volverse más fuerte. ",
-             "Debido a su excesiva energía positiva, Chongyun es muy susceptible a todo lo que lo calienta: eventos ardientes, comida, bebidas, ropa e incluso el sol mismo; incluso pensar en ellos puede desencadenar un brote. Si esto ocurre, Chongyun a menudo entra en un estado maníaco en el que se vuelve excepcionalmente excitado, amistoso e ilógico, aunque puede que simplemente se desmaye. Si bien no recuerda lo que hace en este estado, lo considera vergonzoso y se disculpa por cualquier daño que cause, pero a la mayoría de las personas no les importa e incluso quedan impresionadas por sus acciones en dicho estado." 
-             ],
-
-            "historia": 
-            ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."],
-            
-            "otro": 
-            ["Outros."]
+            "personalidad": "0/personalidad.md",
+            "historia": "0/historia.md",
+            "otro": "0/otros.md"
         },
         "1": {
             "id": "1",
-            "nombre": "See-Jun Park",
-            "avatar": "seejun.png",
-            "photo": "ocs-photo/seejun.png",
+            "nombre": "Cyno",
+            "avatar": "cyno.png",
+            "photo": "cyno.png",
             "bio": {
-                "Nombre": "See-Jun Park",
+                "Nombre": "Cyno",
                 "Edad": "??",
                 "Raza": "??",
                 "O. Sexual": "??"
