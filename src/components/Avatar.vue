@@ -69,4 +69,8 @@ export default {
     cursor: pointer;
     transition: ease-in-out 0.3s;
 }
+
+[c-title] {
+    opacity: 1;
+}
 </style>

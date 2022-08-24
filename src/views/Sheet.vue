@@ -55,7 +55,7 @@ export default {
 
       if(event instanceof PointerEvent) { 
         clicked = this.aimCursor(event); // evitar bug svg o path
-        document.getElementsByClassName('selected').forEach(boton => {
+        Array.from(document.querySelectorAll('.selected')).forEach(boton => {
           if(boton != clicked) boton.classList.remove("selected");
         });
       } else clicked = event;
