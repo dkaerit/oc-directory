@@ -6,4 +6,12 @@ import store from './store'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App);
+
+if (process.env.NODE_ENV === 'production') {
+  app.config.warnHandler = () => {};
+}
+
+app.use(router);
+app.use(store);
+app.mount('#app');

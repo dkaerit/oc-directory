@@ -10,12 +10,12 @@
 
 <script>
 /* eslint-disable */
-    export default {
-        name: 'Banner',
-        data() {
-            return { }
-        },
-    }
+export default {
+    name: 'Banner',
+    data() {
+        return { }
+    },
+}
 </script>
 
 <style scoped lang="scss">

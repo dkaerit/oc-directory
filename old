@@ -1,0 +1,69 @@
+<!--<Avatar v-for="id in range(0,31)" :key="id" :oc="ocs[id]" :value="id"/>-->
+<!--<Avatar v-for="avatar in filteredAvatars" :key="avatar.id" :oc="avatar" :value="avatar.id"/>-->
+
+return (!dim && !canon)? 
+avatars:
+avatars.filter(avatar => !dim || avatar.dim === dim && !canon || avatar.canon === canon);
+
+const avatars = Object.values(this.ocs);
+
+"personalidad": "1/personalidad.md",
+"historia": "1/historia.md",  
+"otro": "1/otros.md",
+
+
+<script>
+    const spoilers = document.querySelectorAll('.spoiler_title');
+    spoilers.forEach(spoiler => {
+      spoiler.addEventListener('click', () => {
+        spoiler.classList.toggle('opened');
+      });
+    });
+  
+    const spoilers = document.querySelectorAll('.spoiler_title_secondary');
+    spoilers.forEach(spoiler => {
+      spoiler.addEventListener('click', () => {
+        spoiler.classList.toggle('opened_secondary');
+      });
+    });
+  </script>
+
+  -------------------------------------------------------
+
+
+  <template>
+    <div>
+      <audio ref="audio" controls></audio>
+    </div>
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  import ytdl from 'ytdl-core';
+  
+  export default {
+    name: 'YoutubeAudioPlayer',
+    data() {
+      return {
+        videoId: 'VIDEO_ID_HERE', // reemplazar con el ID del video de YouTube que desea reproducir
+        audioUrl: '', // URL del archivo de audio descargado
+      };
+    },
+    async mounted() {
+      // Obtener detalles del video de YouTube
+      const response = await axios.get(`https://www.googleapis.com/youtube/v3/videos?id=${this.videoId}&part=snippet,contentDetails&key=API_KEY_HERE`);
+      const videoDetails = response.data.items[0];
+  
+      // Descargar audio en formato MP3
+      const audioStream = ytdl(`https://www.youtube.com/watch?v=${this.videoId}`, { filter: 'audioonly' });
+      const audioBuffer = await ytdl.getInfo(`https://www.youtube.com/watch?v=${
+
+
+
+Primero, debes obtener una clave de API de YouTube desde la consola de desarrolladores de Google.
+
+Luego, puedes utilizar la biblioteca axios para realizar una solicitud GET a la API de YouTube y obtener los detalles del video, incluyendo su URL.
+
+A continuación, puedes utilizar la biblioteca ytdl-core para descargar el audio del video en formato MP3 o WAV.
+
+Finalmente, puedes utilizar la etiqueta <audio> de HTML para reproducir el archivo de audio descargado en tu componente de Vue.

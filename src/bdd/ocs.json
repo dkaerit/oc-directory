@@ -4,46 +4,90 @@
             "id": "0",
             "nombre": "Seong-yun",
             "avatar": "seong-yun.png",
+            "audio": "",
             "photo": "ocs-photo/seong-yun.png",
             "bio": {
                 "Nombre": "Seong-yun",
                 "Edad": "21",
                 "Raza": "Humano",
-                "O. Sexual": "Homosexual"
+                "Orientación": "Homosexual"
             },
-            "personalidad": "0/personalidad.md",
-            "historia": "0/historia.md",
-            "otro": "0/otros.md"
+            "dim": "2d",
+            "canon": "no"
         },
         "1": {
             "id": "1",
             "nombre": "Cyno",
             "avatar": "cyno.png",
             "photo": "ocs-photo/cyno.png",
+            "audio": "",
             "bio": {
                 "Nombre": "Cyno",
                 "Edad": "22",
                 "Raza": "Humano",
-                "O. Sexual": "Bisexual"
+                "Orientación": "Bisexual"
             },
-            "personalidad": "1/personalidad.md",
-            "historia": "1/historia.md",  
-            "otro": "1/otros.md"
+            "dim": "2d",
+            "canon": "yes"
         },
         "2": {
             "id": "2",
             "nombre": "Sidon",
             "avatar": "sidon.png",
             "photo": "ocs-photo/sidon.png",
+            "audio": "",
             "bio": {
                 "Nombre": "Sidon",
                 "Edad": "24",
                 "Raza": "Zora",
-                "O. Sexual": "Bisexual"
+                "Orientación": "Bisexual"
             },
-            "personalidad": "2/personalidad.md",
-            "historia": "2/historia.md",
-            "otro": "2/otros.md"
+            "dim": "2d",
+            "canon": "yes"
+        },
+        "3": {
+            "id": "3",
+            "nombre": "Kai",
+            "avatar": "kai.png",
+            "photo": "ocs-photo/kai.png",
+            "audio": "",
+            "bio": {
+                "Nombre": "Kai",
+                "Edad": "29",
+                "Raza": "Tritón",
+                "Orientación": "Bisexual"
+            },
+            "dim": "2d",
+            "canon": "no"
+        },
+        "4": {
+            "id": "4",
+            "nombre": "Denzel",
+            "avatar": "denzel4.png",
+            "photo": "ocs-photo/denzel5.png",
+            "audio": "inventor.mp3",
+            "bio": {
+                "Nombre": "Denzel Smethwyck",
+                "Nacimiento": "15 de Septiembre",
+                "Edad": "19 años",
+                "Ocupación": "Estud. Acad. de Inefables",
+                "Nacionalidad": "Cornwall, Reino Unido.",
+                "Lealtad": "Neutral",
+                "Pureza": "Sangre Pura",
+                "Especie": "Humano",
+                "Face Claim": "Jack Wolfe"
+            },
+            "dim": "3d",
+            "canon": "no",
+            "relatos": {
+                "0": {
+                    "title": "El trágico incidente",
+                    "fichero": "evzel.md",
+                    "tags": ["au", "drama"],
+                    "resume": "En un mundo donde Voldemort maneja los hilos del ministerio de magia y los mortífagos han ocupado la labor de auror, Evans Mitchel investiga el asunto de muggles desaparecidos de forma clandestina, cosa debería ser reportada a las autoridades",
+                    "image": "https://i.pinimg.com/564x/64/58/64/6458648fe9d99cb179fd0b6bbcdf217e.jpg"
+                }
+            }
         }
     }
 }

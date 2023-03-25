@@ -1,6 +1,6 @@
 <template>
     <div class="avatar">
-      <router-link v-if="oc" :to="`/sheet?oc=${oc.id}`" :c-title="oc.nombre">
+      <router-link v-if="oc.id" :to="`/sheet?oc=${oc.id}`" :c-title="oc.nombre">
         <div class="mini-pic" :style="{backgroundImage: `url('${avatars[oc.avatar]}')`}"></div>  
       </router-link>
       <div v-else class="mini-pic"></div>
@@ -23,7 +23,7 @@ export default {
     importPics: function(collection) {
       let images = {};
       collection.keys().map(item => {  images[item.replace('./', '')] = collection(item); });
-      console.log(images);
+      //console.log(images);
       return images;
     }
   },
